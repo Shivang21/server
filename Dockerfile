@@ -1,5 +1,5 @@
 # Use the official Node.js image as base
-FROM node:14
+FROM node:14 alpine
 
 # Set working directory
 WORKDIR /app
@@ -17,4 +17,5 @@ COPY . .
 EXPOSE 3000
 
 # Start the Express server
-CMD ["node", "server.js"]
+# CMD ["node", "server.js"]
+RUN npm start
